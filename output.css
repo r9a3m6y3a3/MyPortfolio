@@ -1,0 +1,515 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #414344;
+  background-color: #f0f4f8;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Animations */
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* Navigation Styles */
+
+.navbar {
+  background-color: #6c757d;
+  /* Dark gray background */
+  padding: 1rem;
+  /* Padding for the navbar */
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  /* Brand font size */
+  color: #ffffff;
+  /* Brand text color */
+  font-weight: bold;
+  /* Bold text */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  /* Space between navigation items */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  /* Text color for links */
+  font-size: 1.1rem;
+  /* Font size for links */
+  transition: color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700;
+  /* Gold color on hover */
+  text-decoration: underline;
+  /* Underline effect on hover */
+}
+
+/* Responsive Design for Navigation */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+    /* Reduce padding on smaller screens */
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+    /* Reduce space between items on smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    /* Smaller font size on smaller screens */
+  }
+}
+
+/* Home Section */
+
+#home {
+  background-image: linear-gradient(to bottom, #a9c8ed, #7ca6f4);
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* About Section */
+
+#about {
+  padding: 2em;
+}
+
+/* Education Section - Timeline Style */
+
+#education {
+  background-color: #f7f7f7;
+  /* Light background color */
+  padding: 2em;
+  /* Padding for spacing */
+  text-align: center;
+  /* Centered text */
+}
+
+#education h2 {
+  font-size: 2.5rem;
+  /* Larger font size for heading */
+  margin-bottom: 1.5em;
+  /* Space below heading */
+  color: #414344;
+  /* Dark text color */
+}
+
+.container {
+  max-width: 900px;
+  /* Maximum width for the container */
+  margin: auto;
+  /* Center the container */
+  position: relative;
+  /* Positioning for the timeline */
+}
+
+.timeline-item {
+  position: relative;
+  /* Positioning for the timeline items */
+  margin-bottom: 2em;
+  /* Space between timeline items */
+}
+
+.timeline-item .flex {
+  display: flex;
+  /* Flexbox for layout */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.timeline-item .bg-white {
+  padding: 2em;
+  /* Padding for the card */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition */
+}
+
+.timeline-item .bg-white:hover {
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow on hover */
+}
+
+.timeline-item .w-10 {
+  width: 40px;
+  /* Width for the icon circle */
+  height: 40px;
+  /* Height for the icon circle */
+  border-radius: 50%;
+  /* Circular shape */
+  background-color: #85bbea;
+  /* Background color for the icon circle */
+  display: flex;
+  /* Flexbox for centering icon */
+  align-items: center;
+  /* Center icon vertically */
+  justify-content: center;
+  /* Center icon horizontally */
+  color: white;
+  /* Icon color */
+  margin-right: 1em;
+  /* Space between icon and card */
+}
+
+.timeline-item h3 {
+  font-size: 1.8rem;
+  /* Font size for degree */
+  margin-bottom: 0.5em;
+  /* Space below degree */
+}
+
+.timeline-item p {
+  color: #666;
+  /* Lighter color for details */
+  margin: 0.5em 0;
+  /* Margin for spacing */
+}
+
+/* Vertical Line for Timeline */
+
+.container::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  /* Position the line */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  /* Width of the line */
+  background-color: #85bbea;
+  /* Line color */
+  z-index: 0;
+  /* Send line behind items */
+}
+
+/* Responsive Design Adjustments */
+
+@media (max-width: 768px) {
+  .timeline-item .bg-white {
+    padding: 1.5em;
+    /* Adjust padding for smaller screens */
+  }
+
+  .timeline-item h3 {
+    font-size: 1.5rem;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .timeline-item .w-10 {
+    width: 30px;
+    /* Reduce icon size for smaller screens */
+    height: 30px;
+    /* Reduce icon size for smaller screens */
+  }
+
+  #education h2 {
+    font-size: 2rem;
+    /* Adjust heading size for smaller screens */
+  }
+}
+
+/* Project Section */
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Responsive grid */
+  gap: 1.5rem;
+  /* Space between items */
+}
+
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition */
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  /* Prevents items from breaking inside the grid */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Stronger shadow on hover */
+}
+
+/* Optional: Adjusting image sizes for a more varied layout */
+
+.project img {
+  width: 100%;
+  /* Full width for images */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* Skills Section */
+
+#skills {
+  padding: 2em;
+  /* Padding for spacing */
+  background-color: #f7f7f7;
+  /* Light background color */
+  text-align: center;
+  /* Centered text */
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  /* Larger font size for heading */
+  margin-bottom: 1em;
+  /* Space below heading */
+  color: #414344;
+  /* Dark text color */
+}
+
+.flip-card {
+  background-color: #fff;
+  /* White background for flip cards */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  width: 200px;
+  /* Fixed width for flip cards */
+  height: 250px;
+  /* Fixed height for flip cards */
+  margin: 1em;
+  /* Margin for spacing */
+  perspective: 1000px;
+  /* 3D perspective */
+  transition: transform 0.6s;
+  /* Smooth flip transition */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  transition: transform 0.6s;
+  /* Smooth transition for flipping */
+  transform-style: preserve-3d;
+  /* Preserve 3D effect */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  /* Rotate on hover */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  /* Positioning for front and back */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  backface-visibility: hidden;
+  /* Hide backface when not visible */
+  display: flex;
+  /* Flexbox for centering content */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  border-radius: 10px;
+  /* Rounded corners */
+}
+
+.flip-card-front {
+  background-color: #85bbea;
+  /* Front background color */
+  color: white;
+  /* Text color for front */
+}
+
+.flip-card-back {
+  background-color: #414344;
+  /* Back background color */
+  color: white;
+  /* Text color for back */
+  transform: rotateY(180deg);
+  /* Rotate back to hide initially */
+}
+
+.flip-card-back p {
+  padding: 10px;
+  /* Padding for back content */
+  text-align: center;
+  /* Centered text on back */
+}
+
+/* Contact Section */
+
+.contact-section {
+  background-color: #85bbea;
+  /* Background color for contact section */
+  padding: 2em;
+  /* Padding for spacing */
+}
+
+.contact-section h2 {
+  color: #fff;
+  /* Text color for heading */
+  animation: fadeInDown 1s;
+  /* Animation for heading */
+}
+
+.contact-info {
+  background-color: #fff;
+  /* Background color for contact info */
+  padding: 20px;
+  /* Padding for contact info */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+.contact-info p {
+  color: #333;
+  /* Text color for paragraphs */
+  animation: fadeInUp 1s;
+  /* Animation for paragraphs */
+}
+
+.contact-info li {
+  color: #333;
+  /* Text color for list items */
+  animation: fadeInUp 1s;
+  /* Animation for list items */
+}
+
+.contact-info a {
+  color: #333;
+  /* Text color for links */
+  text-decoration: none;
+  /* No underline */
+}
+
+.contact-info a:hover {
+  color: #666;
+  /* Darker color on hover */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-right: 15px;
+    /* Margin for toggler on smaller screens */
+  }
+
+  .timeline-item .bg-white {
+    padding: 1.5em;
+    /* Adjust padding for smaller screens */
+  }
+
+  .timeline-item h3 {
+    font-size: 1.5rem;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .timeline-item .w-10 {
+    width: 30px;
+    /* Reduce icon size for smaller screens */
+    height: 30px;
+    /* Reduce icon size for smaller screens */
+  }
+
+  #education h2 {
+    font-size: 2rem;
+    /* Adjust heading size for smaller screens */
+  }
+
+  .flip-card {
+    width: 150px;
+    /* Adjust width for flip cards on smaller screens */
+    height: 200px;
+    /* Adjust height for flip cards on smaller screens */
+  }
+
+  #skills h2 {
+    font-size: 2rem;
+    /* Adjust heading size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-bottom: 20px;
+    /* Margin for cards on very small screens */
+  }
+
+  .contact-info {
+    padding: 10px;
+    /* Reduce padding for contact info on small screens */
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+    /* Adjust heading size for contact section on small screens */
+  }
+}

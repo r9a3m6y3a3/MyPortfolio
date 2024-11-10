@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramya's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Poppins:400,700&display=swap">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f4f8; /* Light background color */
+    }
+    
+    .typing-text {
+      font-size: 1.25rem;
+      color: #3498db;
+      font-family: Arial, sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid #3498db;
+      width: 17ch;
+      animation: typing 2s steps(15), blink-caret 0.5s step-end infinite;
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 15ch; }
+    }
+
+    /* Blinking caret */
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #3498db; }
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Scale animation for project cards */
+    .scale-up {
+      transition: transform 0.3s ease;
+    }
+
+    .scale-up:hover {
+      transform: scale(1.05);
+    }
+
+    /* Background color for sections */
+    .bg-custom {
+      background-color: #e7f1ff; /* Light blue background */
+    }
+
+    .bg-dark {
+      background-color: #2c3e50; /* Dark background for footer */
+    }
+  </style>
+</head>
+<body class="font-sans leading-normal tracking-normal">
+
+ <!-- Navigation Bar -->
+ <nav class="bg-blue-600 p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="text-white font-bold text-lg">
+      <a href="#">Ramya</a>
+    </div>
+    <div class="space-x-6">
+      <a href="#about" class="text-white hover:text-blue-200">About</a>
+      <a href="#education" class="text-white hover:text-blue-200">Education</a>
+      <a href="#projects" class="text-white hover:text-blue-200">Projects</a>
+      <a href="#contact" class="text-white hover:text-blue-200">Contact</a>
+      <a class="nav-link text-white hover:text-blue-200" href="Ramyaresume.pdf" download>Download My Resume</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Left Side Content -->
+<div class="text-left max-w-lg fade-in">
+  <h1 class="text-5xl font-bold text-black">
+    Welcome to My Portfolio
+  </h1>
+  <p id="animatedText" class="typing-text mt-4"></p> 
+  <div class="mt-8 flex space-x-6"> 
+    <a href="tel:8072927943">
+      <img src="download.png" alt="Phone image" class="w-16 h-16">
+    </a>
+    
+    <a href="mailto:ramyav0603@gmail.com">
+      <img src="mail id.png" alt="Mail Id" class="w-16 h-16">
+    </a>
+    <a href="https://www.linkedin.com/in/ramya-v-93921b253">
+      <img src="linked in.png" alt="LinkedIn" class="w-16 h-16">
+    </a>
+  </div>
+</div>
+
+<!-- Left Side Image (Moved slightly to the right) -->
+<div class="flex justify-center items-center ml-40">
+  <img src="logo.jpg" alt="Profile Picture" class="w-80 h-80 rounded-full object-cover border-4 border-navy-600">
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-custom text-center fade-in">
+  <h2 class="text-4xl font-bold mb-6">About Me</h2>
+  <p class="text-lg mx-auto max-w-2xl">Driven by a passion for innovation, I design and develop cutting-edge solutions that simplify complex challenges. With a relentless pursuit of knowledge and adaptability, I stay at the forefront of digital transformation.</p>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-16 bg-gray-100">
+  <h2 class="text-4xl font-bold text-center mb-8">Education</h2>
+  <div class="container relative">
+    <!-- Vertical Line for Timeline -->
+    <div class="absolute left-5 top-0 bottom-0 w-1 bg-blue-500"></div>
+
+    <!-- Education Item 1 -->
+    <div class="timeline-item mb-8">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4">
+          <i class="fas fa-graduation-cap"></i> <!-- Use an icon here -->
+        </div>
+        <div class="bg-white p-8 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Bachelor of Computer Science and Engineering</h3>
+          <p class="text-gray-600 italic">VIVEKANANDHA COLLEGE OF ENGINEERING FOR WOMEN</p>
+          <p class="text-gray-500 mt-2">Year: 2021 - 2025</p>
+          <p class="text-gray-800 font-semibold mt-4">CGPA: 7.5</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Item 2 -->
+    <div class="timeline-item mb-8">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4">
+          <i class="fas fa-graduation-cap"></i> <!-- Use an icon here -->
+        </div>
+        <div class="bg-white p-8 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Higher Secondary (HSLC)</h3>
+          <p class="text-gray-600 italic">SARASWATHI MATRIC HIGHER SECONDARY SCHOOL</p>
+          <p class="text-gray-500 mt-2">Year: 2019 - 2020</p>
+          <p class="text-gray-800 font-semibold mt-4">Percentage: 71%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Item 3 -->
+    <div class="timeline-item mb-8">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center mr-4">
+          <i class="fas fa-graduation-cap"></i> <!-- Use an icon here -->
+        </div>
+        <div class="bg-white p-8 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Secondary School (SSLC)</h3>
+          <p class="text-gray-600 italic">SARASWATHI HIGHER SECONDARY SCHOOL</p>
+          <p class="text-gray-500 mt-2">Year: 2017 - 2018</p>
+          <p class="text-gray-800 font-semibold mt-4">Percentage: 86%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 bg-custom text-center fade-in">
+  <h2 class="text-4xl font-bold mb-6">My Projects</h2>
+  <div class="masonry-grid">
+      <div class="project bg-white p-6 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold mb-4">Project 1</h3>
+          <p class="text-gray-600">EDUPAY HUB - Online Fee Payment Website</p>
+          <img src="edupay.jpg" alt="Project 1" class="mb-4 rounded">
+          <p class="card-text">Developed a user-friendly online fee payment system for our College, enabling students to securely pay academic fees and enhancing the overall payment experience.</p>
+          <ul class="list-disc list-inside mt-2">
+              <li>Secure payment gateway integration</li>
+              <li>Reduced manual payment processing</li>
+              <li>Improved payment experience</li>
+          </ul>
+      </div>
+      <div class="project bg-white p-6 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold mb-4">Project 2</h3>
+          <p class="text-gray-600">FoodPicky - Online Food Delivery App</p>
+          <img src="food.jpg" alt="Project 2" class="mb-4 rounded">
+          <p class="card-text">Developed a comprehensive online food delivery app, FoodHub, connecting customers with local restaurants and food establishments.</p>
+          <ul class="list-disc list-inside mt-2">
+              <li>Restaurant and menu management</li>
+              <li>Order tracking and delivery management</li>
+              <li>Secure payment processing</li>
+          </ul>
+      </div>
+      <div class="project bg-white p-6 shadow-lg rounded-lg scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+          <h3 class="text-2xl font-bold mb-4">Project 3</h3>
+          <p class="text-gray-600">E-commerce Website</p>
+          <img src="ecommerce.jpg" alt="Project 3" class="mb-4 rounded">
+          <p class="card-text">Developed a fully functional e-commerce website, ShopZone, offering a seamless online shopping experience across various categories, including:</p>
+          <ul class="list-disc list-inside mt-2">
+              <li>Dresses
+                  <ul class="list-disc list-inside ml-4">
+                      <li>Formal</li>
+                      <li>Casual</li>
+                      <li>Party Wear</li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-16 bg-gray-100 text-center fade-in">
+  <h2 class="text-4xl font-bold mb-6">My Skills</h2>
+  <div class="flex flex-wrap justify-center">
+    <div class="flip-card m-4 scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Java</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Expertise in Java programming language</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card m-4 scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>HTML</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Proficient in HTML markup language</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card m-4 scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>CSS</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Skilled in CSS styling language</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card m-4 scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>C</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Experience with C programming language</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card m-4 scale-up hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h3>Cybersecurity</h3>
+        </div>
+        <div class="flip-card-back">
+          <p>Knowledge of cybersecurity principles</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section mt-8 text-center flex justify-center items-center fade-in">
+  <div class="space-y-8 max-w-lg w-full">
+    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+    <p class="text-gray-600 mb-6">Feel free to reach out if you have any questions or opportunities to discuss!</p>
+    
+    <form action="https://example.com/submit" method="POST" class="space-y-4 w-full">
+      <!-- First Name Field -->
+      <div class="flex justify-between">
+        <div class="w-1/2 pr-2">
+          <label for="firstName" class="block text-gray-700 font-semibold">First Name</label>
+          <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your First Name">
+        </div>
+        
+        <!-- Last Name Field -->
+        <div class="w-1/2 pl-2">
+          <label for="lastName" class="block text-gray-700 font-semibold">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Last Name">
+        </div>
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <label for="email" class="block text-gray-700 font-semibold">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Email Address">
+      </div>
+
+      <!-- Message Field -->
+      <div>
+        <label for="message" class="block text-gray-700 font-semibold">Message</label>
+        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Your Message"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-6 text-center">
+  <p>&copy; 2024 Ramya. All Rights Reserved.</p>
+</footer>
+
+<!-- Font Awesome CDN for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script>
+  const texts = ["Java Developer", "Front End Developer",  "Cybersecurity"];
+  let count = 0;
+  let index = 0;
+  let currentText = "";
+  let letter = "";
+
+  (function type() {
+    if (count === texts.length) {
+      count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("animatedText").textContent = letter;
+    if (letter.length === currentText.length) {
+      count++;
+      index = 0;
+      setTimeout(type, 1000);  // Pause before typing next text
+    } else {
+      setTimeout(type, 100);  // Speed of typing
+    }
+  })();
+</script>
+
+</body>
+</html>
